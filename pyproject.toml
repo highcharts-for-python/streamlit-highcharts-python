@@ -1,0 +1,106 @@
+[build-system]
+requires = [
+    "hatchling>=1.6",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "streamlit-highcharts"
+description = "Streamlit component that for embedding Highcharts for Python data visualizations in your Streamlit apps."
+readme = "README.md"
+license-files = { paths = ["LICENSE"] }
+
+dynamic = [
+     "version"
+]
+
+authors = [
+    { name = "HCP LLC", email = "support@highchartspython.com" }
+]
+
+keywords = [
+    "highcharts",
+    "data visualization",
+    "data viz",
+    "charts",
+    "graphing",
+    "streamlit",
+    "plotting"
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Manufacturing",
+    "Intended Audience :: Science/Research",
+
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Utilities",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Office/Business",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+
+    "License :: Other/Proprietary License"
+]
+
+requires-python = ">= 3.10"
+dependencies = [
+    "highcharts-core>=1.9.3",
+    "streamlit >= 0.63",
+]
+
+[tool.hatch.version]
+path = "streamlit_highcharts/__version__.py"
+
+[project.urls]
+"Homepage" = "https://highchartspython.com"
+"Documentation" = "https://streamlit.highchartspython.com/en/latest/"
+"Support" = "https://www.highchartspython.com/get-help"
+"Source Code" = "https://github.com/highcharts-for-python/streamlit-highcharts-python"
+"History" = "https://github.com/highcharts-for-python/streamlit-highcharts-python/blob/main/CHANGES.rst"
+"Bug Tracker" = "https://github.com/highcharts-for-python/streamlit-highcharts-python/issues"
+"Demo" = "https://github.com/highcharts-for-python/highcharts-for-python-demos"
+"Sponsor" = "https://github.com/sponsors/highcharts-for-python"
+
+[project.optional-dependencies]
+dev = [
+    "playwright==1.39.0",
+    "pytest>=7.4.0",
+    "pytest-cov>=3.0.0",
+    "pytest-xdist>=2.5.0",
+    "python-dotenv>=1.0.0",
+    "pytest-playwright-snapshot==1.0",
+    "pytest-rerunfailures==12.0",
+    "requests==2.31.0",
+    "Sphinx==6.1.3",
+    "sphinx-rtd-theme==1.2.0",
+    "sphinx-toolbox==3.4.0",
+    "sphinx-tabs==3.4.1",
+]
+soft = [
+    "IPython>=8.10.0",
+    "pyspark>=3.3.0",
+    "pandas>=1.3.3",
+    "orjson>=3.7.7",
+    "anthropic>=0.3.11",
+    "dill>=0.3.7",
+    "openai>=0.28.0"
+]
+ai = [
+    "anthropic>=0.3.11",
+    "dill>=0.3.7",
+    "openai>=0.28.0"
+]
+docs = [
+    "Sphinx==6.1.3",
+    "sphinx-rtd-theme==1.2.0",
+    "sphinx-toolbox==3.4.0",
+    "sphinx-tabs==3.4.1"
+]
